@@ -16,7 +16,7 @@ create table oauth_client_details (
   authorities VARCHAR2(255),
   access_token_validity INTEGER,
   refresh_token_validity INTEGER,
-  additional_information BLOB,
+  additional_information VARCHAR2(4000), --no soporto CLOB
   autoapprove VARCHAR2(255)
 );
 
@@ -72,6 +72,6 @@ create table ClientDetails (
   authorities VARCHAR2(255),
   access_token_validity INTEGER,
   refresh_token_validity INTEGER,
-  additionalInformation BLOB,
+  additionalInformation  VARCHAR2(4000), --no soporto CLOB
   autoApproveScopes VARCHAR2(255)
 );
