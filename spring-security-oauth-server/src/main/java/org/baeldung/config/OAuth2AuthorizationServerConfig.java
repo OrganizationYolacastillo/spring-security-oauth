@@ -41,8 +41,8 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
     @Qualifier("authenticationManagerBean")
     private AuthenticationManager authenticationManager;
 
-    @Value("classpath:schema.sql")
-    private Resource schemaScript;
+    //@Value("classpath:schema.sql")
+    //private Resource schemaScript;
 
     @Value("classpath:data.sql")
     private Resource dataScript;
@@ -123,7 +123,7 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
     @Bean
     public DataSourceInitializer dataSourceInitializer(final DataSource dataSource) {
         final DataSourceInitializer initializer = new DataSourceInitializer();
-        initializer.setDataSource(dataSource);
+        //initializer.setDataSource(dataSource);
         initializer.setDatabasePopulator(databasePopulator());
         return initializer;
     }
